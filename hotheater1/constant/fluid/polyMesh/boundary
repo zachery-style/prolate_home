@@ -1,0 +1,83 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2012                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       polyBoundaryMesh;
+    location    "constant/fluid/polyMesh";
+    object      boundary;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+
+7
+(
+    maxY
+    {
+        type            wall;
+        inGroups        1 ( wall );
+        nFaces          4900;
+        startFace       1045902;
+    }
+
+    minX
+    {
+        type            wall;
+        inGroups        1 ( wall );
+        nFaces          4900;
+        startFace       1050802;
+    }
+
+    maxX
+    {
+        type            wall;
+        inGroups        1 ( wall );
+        nFaces          4900;
+        startFace       1055702;
+    }
+
+    minY
+    {
+        type            wall;
+        inGroups        1 ( wall );
+        nFaces          4900;
+        startFace       1060602;
+    }
+
+    minZ
+    {
+        type            wall;
+        inGroups        1 ( wall );
+        nFaces          4900;
+        startFace       1065502;
+    }
+
+    maxZ
+    {
+        type            wall;
+        inGroups        1 ( wall );
+        nFaces          4900;
+        startFace       1070402;
+    }
+
+    fluid_to_ellipse
+    {
+        type            mappedWall;
+        inGroups        1 ( wall );
+        nFaces          3894;
+        startFace       1075302;
+        sampleMode      nearestPatchFace;
+        sampleRegion    ellipse;
+        samplePatch     ellipse_to_fluid;
+    }
+
+)
+
+
+// ************************************************************************* //
